@@ -1,0 +1,25 @@
+name: KittenExpExPaper
+main: com.iluyf.mc.Expex
+version: 0.0
+description: 用于 Paper 的插件，允许玩家用经验值交换一些资源
+api-version: 1.19
+author: Kittengarten
+website: https://github.com/Kittengarten/KittenExpExPaper
+load: STARTUP
+commands:
+  expex:
+    description: 查询世界树纪元。
+    usage: /<command> list 或 /<command> item [物品] [数量]
+    aliases: [ee]
+permissions:
+  kittenexpex.*:
+    description: KittenExpEx 插件所有命令的权限。
+    children:
+      kittenexpex.expex: true
+      kittenexpex.op: true
+  kittenexpex.expex:
+    description: 允许使用经验值交换资源。
+    default: true
+  kittenexpex.op:
+    description: KittenExpEx 插件管理命令的权限。
+    default: op 

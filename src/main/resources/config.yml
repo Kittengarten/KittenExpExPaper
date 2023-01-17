@@ -1,0 +1,48 @@
+amethyst_block:
+  name: 紫水晶块
+  price: 32768
+blue_ice:
+  name: 蓝冰
+  price: 2048
+coal_block:
+  name: 煤炭块
+  price: 2048
+copper_block:
+  name: 铜块
+  price: 2048
+diamond_block:
+  name: 钻石块
+  price: 16384
+emerald_block:
+  name: 绿宝石块
+  price: 4096
+enchanted_golden_apple:
+  name: 附魔金苹果
+  price: 65536
+gold_block:
+  name: 金块
+  price: 4096
+iron_block:
+  name: 铁块
+  price: 1024
+lapis_block:
+  name: 青金石块
+  price: 4096
+netherite_block:
+  name: 下界合金块
+  price: 262144
+quartz_block:
+  name: 石英块
+  price: 256
+redstone_block:
+  name: 红石块
+  price: 4096
+sand:
+  name: 沙子
+  price: 32
+shulker_shell:
+  name: 潜影壳
+  price: 4096
+totem_of_undying:
+  name: 不死图腾
+  price: 65536
