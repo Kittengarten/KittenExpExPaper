@@ -1,9 +1,6 @@
 amethyst_block:
   name: 紫水晶块
   price: 32768
-blue_ice:
-  name: 蓝冰
-  price: 2048
 coal_block:
   name: 煤炭块
   price: 2048
@@ -22,6 +19,12 @@ enchanted_golden_apple:
 gold_block:
   name: 金块
   price: 4096
+glowstone:
+  name: 荧石
+  price: 1024
+gravel:
+  name: 沙砾
+  price: 64
 iron_block:
   name: 铁块
   price: 1024
@@ -31,9 +34,12 @@ lapis_block:
 netherite_block:
   name: 下界合金块
   price: 262144
-quartz_block:
-  name: 石英块
+packed_ice:
+  name: 浮冰
   price: 256
+quartz:
+  name: 下界石英
+  price: 64
 redstone_block:
   name: 红石块
   price: 4096

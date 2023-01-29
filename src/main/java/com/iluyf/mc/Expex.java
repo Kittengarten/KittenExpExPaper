@@ -18,9 +18,9 @@ import java.util.List;
 
 public class Expex extends JavaPlugin implements Listener {
     public List<String> list;
-    public String[] array = { "amethyst_block", "blue_ice", "coal_block", "copper_block", "diamond_block",
-            "emerald_block", "enchanted_golden_apple", "gold_block", "iron_block", "lapis_block", "netherite_block",
-            "quartz_block", "redstone_block", "sand", "shulker_shell", "totem_of_undying" };
+    public String[] array = { "amethyst_block", "coal_block", "copper_block", "diamond_block", "emerald_block",
+            "enchanted_golden_apple", "gold_block", "glowstone", "gravel", "iron_block", "lapis_block",
+            "netherite_block", "packed_ice", "quartz", "redstone_block", "sand", "shulker_shell", "totem_of_undying" };
 
     @Override
     public void onLoad() {
@@ -114,15 +114,18 @@ public class Expex extends JavaPlugin implements Listener {
                             lexp = 9 * level - 158;
                         }
                         exp += pexp * lexp;
+                        PlayerInventory inventory = player.getInventory();
+                        int firstEmpty = inventory.firstEmpty();
                         if (exp < priceAll) {
                             sender.sendMessage(String.format("需要 %d 点经验值，你当前的 %d 点经验值不够喵！", priceAll, exp));
+                        } else if (-1 == firstEmpty) {
+                            sender.sendMessage("物品栏已满喵！");
                         } else {
                             exp -= priceAll;
                             player.setExp(0);
                             player.setLevel(0);
                             player.giveExp(exp);
-                            PlayerInventory inventory = player.getInventory();
-                            inventory.addItem(item);
+                            inventory.setItem(firstEmpty, item);
                             getLogger().info(String.format("%s 兑换了 %d 个[%s]", player.getName(), count, name));
                             sender.sendMessage(String.format("兑换了 %d 个[%s]", count, name));
                         }
