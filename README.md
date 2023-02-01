@@ -10,6 +10,10 @@ KittenExpExPaper 是一个 Minecraft Java 版`Paper`插件，由`Java 19`编译�
 
 * 使用命令`/expex list`查询可交换的资源列表及其命令
 * 使用命令`/expex item [命名空间 ID] [数量]`交换对应资源
+* 使用命令`/expex exp [经验值]`将经验值交换出来用于经验修补
+
+> 多余的经验值会被重新吸收
+> 需要花费双倍的经验值来兑换
 
 ## 价格
 

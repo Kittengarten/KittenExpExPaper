@@ -8,8 +8,8 @@ website: https://github.com/Kittengarten/KittenExpExPaper
 load: STARTUP
 commands:
   expex:
-    description: 查询世界树纪元。
-    usage: /<command> list 或 /<command> item [物品] [数量]
+    description: 用经验值交换资源。
+    usage: /<command> list 或 /<command> item [物品] [数量] 或 /<command> exp [数量]
     aliases: [ee]
 permissions:
   kittenexpex.*:
