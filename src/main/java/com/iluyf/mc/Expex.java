@@ -9,8 +9,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import static org.bukkit.ChatColor.*;
+import net.kyori.adventure.text.format.Style;
+import static net.kyori.adventure.text.format.NamedTextColor.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,20 +24,20 @@ public class Expex extends JavaPlugin implements Listener {
 
     @Override
     public void onLoad() {
-        getLogger().info(AQUA + "KittenExpEx 已加载。");
+        getLogger().info(AQUA + "KittenExpEx 已加载。" + Style.empty());
     }
 
     @Override
     public void onEnable() {
         this.getCommand("expex").setExecutor(new ExpCommand());
         list = List.of(array);
-        getLogger().info(GREEN + "KittenExpEx 开始运行。");
+        getLogger().info(GREEN + "KittenExpEx 开始运行。" + Style.empty());
         getLogger().info(String.format("加载了 %d 条价目表", array.length));
     }
 
     @Override
     public void onDisable() {
-        getLogger().info(RED + "KittenExpEx 暂停运行。");
+        getLogger().info(RED + "KittenExpEx 暂停运行。" + Style.empty());
     }
 
     public class ExpCommand implements TabExecutor {
@@ -45,12 +45,13 @@ public class Expex extends JavaPlugin implements Listener {
         @Override
         public List<String> onTabComplete(CommandSender sender, Command cmd, String label, String[] args) {
             if (1 == args.length) {
-                return Arrays.asList("list", "item");
+                return Arrays.asList("list", "item", "exp");
             }
             if (2 == args.length && "item".equals(args[0])) {
                 return list;
             }
-            if (3 == args.length && "item".equals(args[0]) && list.contains(args[1])) {
+            if ((3 == args.length && "item".equals(args[0]) && list.contains(args[1]))
+                    || (2 == args.length && "exp".equals(args[0]))) {
                 return Arrays.asList("[数量]");
             }
             return new ArrayList<>();
@@ -125,7 +126,8 @@ public class Expex extends JavaPlugin implements Listener {
                             return false;
                         }
                         if (1 > gexp) {
-                            return false;
+                            sender.sendMessage("一次最少兑换 1 点喵！");
+                            return true;
                         }
                         if (256 < gexp) {
                             sender.sendMessage("一次最多兑换 256 点喵！");
@@ -143,7 +145,7 @@ public class Expex extends JavaPlugin implements Listener {
                             player.giveExp(exp);
                             player.giveExp(player.applyMending(gexp));
                             getLogger().info(String.format("%s 兑换了 %d 点[经验值]", player.getName(), gexp));
-                            sender.sendMessage(String.format("兑换了 %d 个[%s]", gexp));
+                            sender.sendMessage(String.format("兑换了 %d 点[经验值]", gexp));
                         }
                         return true;
                     }

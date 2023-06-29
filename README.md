@@ -2,7 +2,7 @@
 
 ## 简介
 
-KittenExpExPaper 是一个 Minecraft Java 版`Paper`插件，由`Java 19`编译，仅支持`1.19`以上版本。
+KittenExpExPaper 是一个 Minecraft Java 版`Paper`插件，需要`Java 17`以上运行环境，仅支持`1.20`以上版本。
 
 ## 功能
 
