@@ -1,6 +1,9 @@
 package com.iluyf.mc;
 
-import org.bukkit.Material;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import net.kyori.adventure.text.format.Style;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
@@ -8,17 +11,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
-import net.kyori.adventure.text.format.Style;
 import static net.kyori.adventure.text.format.NamedTextColor.*;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Expex extends JavaPlugin implements Listener {
     public List<String> list;
-    public String[] array = { "amethyst_block", "coal_block", "copper_block", "diamond_block", "emerald_block",
+    public String[] array = { "amethyst_shard", "coal_block", "copper_block", "diamond_block", "emerald_block",
             "enchanted_golden_apple", "gold_block", "glowstone", "gravel", "iron_block", "lapis_block",
             "netherite_block", "packed_ice", "quartz", "redstone_block", "sand", "shulker_shell", "totem_of_undying" };
 

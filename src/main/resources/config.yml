@@ -1,6 +1,6 @@
-amethyst_block:
-  name: 紫水晶块
-  price: 32768
+amethyst_shard:
+  name: 紫水晶碎片
+  price: 8192
 coal_block:
   name: 煤炭块
   price: 2048

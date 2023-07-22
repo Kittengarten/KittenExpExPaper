@@ -19,7 +19,7 @@ KittenExpExPaper 是一个 Minecraft Java 版`Paper`插件，需要`Java 17`以�
 
 |物品|命名空间 ID|单价|
 |:----------:|:----------------------:|:------:|
-|紫水晶块|amethyst_block|32768|
+|紫水晶碎片|amethyst_shard|8192|
 |煤炭块|coal_block|2048|
 |铜块|copper_block|2048|
 |钻石块|diamond_block|16384|

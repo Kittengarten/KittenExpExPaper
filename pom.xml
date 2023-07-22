@@ -7,7 +7,7 @@
     <!-- The Basics -->
     <groupId>com.iluyf.mc</groupId>
     <artifactId>KittenExpExPaper</artifactId>
-    <version>0.0</version>
+    <version>0.1</version>
     <name>KittenExpEx</name>
     <description>Minecraft 经验值交换物品 Paper 插件</description>
     <url>https://github.com/Kittengarten/KittenExpExPaper</url>
