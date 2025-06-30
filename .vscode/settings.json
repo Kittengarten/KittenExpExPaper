@@ -1,4 +1,7 @@
 {
     "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "yaml.schemas": {
+        "https://www.schemastore.org/paper-plugin.json": "file:///d%3A/OneDrive/%E5%B9%BC%E5%96%B5%E5%9B%AD/%E6%96%87%E6%A1%A3/%E7%A8%8B%E5%BA%8F/Minecraft/%E6%8F%92%E4%BB%B6/KittenExpExPaper/src/main/resources/plugin.yml"
+    }
 }

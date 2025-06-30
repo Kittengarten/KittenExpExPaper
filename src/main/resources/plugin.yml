@@ -1,8 +1,8 @@
 name: KittenExpExPaper
 main: com.iluyf.mc.Expex
-version: 0.0
+version: 0.1.0
 description: 用于 Paper 的插件，允许玩家用经验值交换一些资源
-api-version: 1.19
+api-version: "1.21"
 author: Kittengarten
 website: https://github.com/Kittengarten/KittenExpExPaper
 load: STARTUP
@@ -22,4 +22,4 @@ permissions:
     default: true
   kittenexpex.op:
     description: KittenExpEx 插件管理命令的权限。
-    default: op 
+    default: op
